@@ -106,10 +106,9 @@ export const caseStudies: CaseStudy[] = [
       result: ["팀 투표 우수팀 선정.", "우수상 수상."],
     },
     placeholders: [
-      { label: "DOOR MECHANIC DIAGRAM" },
-      { label: "GAMEPLAY SCREENSHOT" },
-      { label: "UNITY EDITOR" },
-      { label: "DEATH UI" },
+      { label: "LEVEL DESIGN", image: "/images/unhinged-leveldesign.png" },
+      { label: "MAP", image: "/images/unhinged-map.png" },
+      { label: "DIARY", image: "/images/unhinged-diary.png" },
     ],
   },
   {
@@ -144,10 +143,9 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     placeholders: [
-      { label: "CURRENT LOOP DIAGRAM" },
-      { label: "IMPROVED LOOP DIAGRAM" },
-      { label: "REWARD TABLE" },
-      { label: "SYSTEM ANALYSIS TABLE" },
+      { label: "CONTENTS", image: "/images/lostark-contents.png" },
+      { label: "DATA TABLE", image: "/images/lostark-datatable.png" },
+      { label: "MAP", image: "/images/lostark-map.png" },
     ],
   },
   {
