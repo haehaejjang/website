@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Pretendard", "Apple SD Gothic Neo", ui-sans-serif, system-ui,
+    -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 고정 헤더에 가려지지 않도록 앵커 오프셋 */
+  scroll-padding-top: 96px;
+}
+
+body {
+  background-color: theme("colors.canvas");
+  color: theme("colors.ink");
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@layer utilities {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 sm:px-8;
+  }
+  .section-pad {
+    @apply py-24 sm:py-32;
+  }
+}
+
+/* 모션을 줄이도록 설정한 사용자를 위한 배려 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
