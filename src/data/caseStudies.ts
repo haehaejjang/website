@@ -1,6 +1,8 @@
 export type Placeholder = {
   /** placeholder 박스에 표시할 자료 유형 */
   label: string;
+  /** 실제 이미지 경로 (public 기준). 있으면 이미지, 없으면 placeholder 박스 */
+  image?: string;
 };
 
 export type CaseStudyDetail = {
@@ -209,9 +211,9 @@ export const caseStudies: CaseStudy[] = [
       result: ["한국게임학회 추계학술발표대회 인기상 수상."],
     },
     placeholders: [
-      { label: "MAP STRUCTURE" },
-      { label: "CHARACTER ART" },
-      { label: "OBJECT RELATION DIAGRAM" },
+      { label: "MAP STRUCTURE", image: "/images/forest-map-structure.png" },
+      { label: "CHARACTER ART", image: "/images/forest-characterart.png" },
+      { label: "OBJECT RELATION DIAGRAM", image: "/images/forest-reward.png" },
     ],
   },
 ];

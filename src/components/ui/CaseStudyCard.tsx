@@ -196,9 +196,26 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
               Materials
             </h4>
             <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {study.placeholders.map((p) => (
-                <Placeholder key={p.label} label={p.label} />
-              ))}
+              {study.placeholders.map((p) =>
+                p.image ? (
+                  <figure key={p.label}>
+                    <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-line bg-canvas">
+                      <Image
+                        src={p.image}
+                        alt={`${study.title} — ${p.label}`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 360px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption className="mt-2 text-[11px] font-medium uppercase tracking-[0.15em] text-muted">
+                      {p.label}
+                    </figcaption>
+                  </figure>
+                ) : (
+                  <Placeholder key={p.label} label={p.label} />
+                ),
+              )}
             </div>
           </div>
         </div>
