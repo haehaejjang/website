@@ -7,12 +7,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "서브컬처 미소녀 비주얼노벨",
-    genre: "비주얼노벨",
-    role: "기획 · 시나리오",
-    experience: "캐릭터 루트와 선택지 톤 설계",
-  },
-  {
     title: "Memory Loss",
     genre: "턴제 로그라이트 / 2D 도트",
     role: "팀장 · 기획 · 아트",
