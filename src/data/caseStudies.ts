@@ -69,9 +69,9 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     placeholders: [
-      { label: "DAY FLOWCHART" },
-      { label: "STAT & FLAG TABLE" },
-      { label: "GOOGLE SHEET SCREENSHOT" },
+      { label: "IN GAME", image: "/images/tofu-ingame.png" },
+      { label: "FLOWCHART", image: "/images/tofu-flowchart.png" },
+      { label: "GOOGLE SHEET", image: "/images/tofu-googlesheet.png" },
     ],
   },
   {
