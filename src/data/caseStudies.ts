@@ -178,9 +178,9 @@ export const caseStudies: CaseStudy[] = [
       result: ["프로젝트를 완주했습니다.", "팀원 투표로 우수 팀원에 선출되었습니다."],
     },
     placeholders: [
-      { label: "LEVEL DESIGN", image: "/images/darkness-ingame.png" },
-      { label: "TASK TABLE", image: "/images/darkness-leveldesign.png" },
-      { label: "GAMEPLAY SCREENSHOT", image: "/images/darkness-flowchart.png" },
+      { label: "IN GAME", image: "/images/darkness-ingame.png" },
+      { label: "LEVEL DESIGN", image: "/images/darkness-leveldesign.png" },
+      { label: "FLOWCHART", image: "/images/darkness-flowchart.png" },
     ],
   },
   {
@@ -214,7 +214,7 @@ export const caseStudies: CaseStudy[] = [
     placeholders: [
       { label: "MAP STRUCTURE", image: "/images/forest-map-structure.png" },
       { label: "CHARACTER ART", image: "/images/forest-characterart.png" },
-      { label: "OBJECT RELATION DIAGRAM", image: "/images/forest-reward.png" },
+      { label: "REWARD", image: "/images/forest-reward.png" },
     ],
   },
 ];
