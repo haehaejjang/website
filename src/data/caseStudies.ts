@@ -177,9 +177,9 @@ export const caseStudies: CaseStudy[] = [
       result: ["프로젝트를 완주했습니다.", "팀원 투표로 우수 팀원에 선출되었습니다."],
     },
     placeholders: [
-      { label: "LEVEL DESIGN" },
-      { label: "TASK TABLE" },
-      { label: "GAMEPLAY SCREENSHOT" },
+      { label: "LEVEL DESIGN", image: "/images/darkness-ingame.png" },
+      { label: "TASK TABLE", image: "/images/darkness-leveldesign.png" },
+      { label: "GAMEPLAY SCREENSHOT", image: "/images/darkness-flowchart.png" },
     ],
   },
   {
