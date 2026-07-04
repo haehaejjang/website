@@ -40,7 +40,7 @@ export const caseStudies: CaseStudy[] = [
     team: "4인 / Unreal Engine",
     role: "전체 기획 · 시나리오 총괄",
     summary:
-      "선택 결과가 엔딩에서만 드러나는 비주얼노벨의 약점을 보완하기 위해, 낮 탐색 → 오후 선택 → 밤 결과 회수 구조를 설계했습니다.",
+      "선택 결과가 엔딩에서만 드러나는 비주얼노벨의 단점을 보완하기 위해, 일정 방 내부의 오브젝트를 상호작용하여, 이후 결과가 바뀌는 구조의 게임 시스템을 확립하였습니다. 낮 탐색 → 오후 선택 → 밤 결과 회수 구조의 게임 시스템을 확립하여, 시나리오를 효율적으로 활용할 수 있게 하였습니다.",
     skills: ["System Design", "Scenario Design", "Documentation"],
     detail: {
       problem:
