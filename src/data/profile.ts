@@ -1,6 +1,6 @@
 export const profile = {
   name: "안세은",
-  nameEn: "SE EUN AHN",
+  nameEn: "SE EUN AN",
   role: "Game Designer",
   tagline: "콘텐츠 · 시스템 · 시나리오 기획",
   heroDescription:
