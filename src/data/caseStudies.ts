@@ -24,6 +24,8 @@ export type CaseStudy = {
   role: string;
   summary: string;
   skills: string[];
+  /** 카드 상단 대표 이미지 (public/images 기준 경로). 없으면 placeholder 표시 */
+  coverImage?: string;
   detail: CaseStudyDetail;
   placeholders: Placeholder[];
 };
@@ -39,6 +41,7 @@ export const caseStudies: CaseStudy[] = [
     period: "2026.03 – 2026.05",
     team: "4인 / Unreal Engine",
     role: "전체 기획 · 시나리오 총괄",
+    coverImage: "/images/tofu-cover.png",
     summary:
       "선택 결과가 엔딩에서만 드러나는 비주얼노벨의 단점을 보완하기 위해, 일정 방 내부의 오브젝트를 상호작용하여, 이후 결과가 바뀌는 구조의 게임 시스템을 확립하였습니다. 낮 탐색 → 오후 선택 → 밤 결과 회수 구조의 게임 시스템을 확립하여, 시나리오를 효율적으로 활용할 수 있게 하였습니다.",
     skills: ["System Design", "Scenario Design", "Documentation"],
@@ -77,6 +80,7 @@ export const caseStudies: CaseStudy[] = [
     affiliation: "미래내일 일경험 NCAI 1기 인턴",
     team: "5인 / Unity",
     role: "기획 · 클라이언트 · UI",
+    coverImage: "/images/unhinged-cover.png",
     summary:
       "기존 공포 퍼즐의 ‘열쇠를 찾아 문을 여는’ 구조를 비틀어, 문 자체를 떼어내고 배치하는 핵심 메카닉을 설계했습니다.",
     skills: ["System Design", "Content Design", "Production Support"],
@@ -112,6 +116,7 @@ export const caseStudies: CaseStudy[] = [
     genre: "개인 작업 · 라이브 서비스 분석",
     period: "2025.12 – 2026.02",
     role: "카오스 던전 · 쿠르잔 전선 분석",
+    coverImage: "/images/lostark-cover.png",
     summary:
       "반복 콘텐츠의 피로 원인을 보상 누락 압박과 다캐릭터 숙제 부담으로 정의하고, 보상 루프 개선안을 제안했습니다.",
     skills: ["System Design", "Documentation"],
@@ -149,6 +154,7 @@ export const caseStudies: CaseStudy[] = [
     genre: "스토리형 공포 탈출 / 2D 사이드뷰",
     period: "2024.07 – 2024.08",
     role: "PM 겸 기획자",
+    coverImage: "/images/darkness-cover.png",
     summary:
       "기획, 아트, 개발 간 해석 차이로 작업 기준이 흔들리는 문제를 문서화와 우선순위 정리로 해결했습니다.",
     skills: ["Collaboration", "Documentation", "Content Design"],
@@ -182,6 +188,7 @@ export const caseStudies: CaseStudy[] = [
     period: "2023.03 – 2023.12",
     motif: "동화 ‘빨간 모자’",
     role: "기획 · 시나리오 · 아트",
+    coverImage: "/images/forest-cover.png",
     summary:
       "익숙한 동화 소재를 단순 재현하지 않고, 플레이어가 공간을 탐색하며 이야기를 해석하는 어드벤처 구조로 재구성했습니다.",
     skills: ["Scenario Design", "Content Design", "Art"],

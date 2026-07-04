@@ -1,11 +1,42 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { CaseStudy } from "@/data/caseStudies";
 import { Tag } from "./Tag";
 import { Modal } from "./Modal";
 import { Placeholder } from "./Placeholder";
+
+/** 카드 상단 대표 이미지. coverImage가 없으면 PROJECT IMAGE placeholder. */
+function CoverImage({
+  src,
+  alt,
+}: {
+  src?: string;
+  alt: string;
+}) {
+  if (!src) {
+    return (
+      <Placeholder
+        label="PROJECT IMAGE"
+        ratio="video"
+        className="rounded-2xl"
+      />
+    );
+  }
+  return (
+    <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-line bg-canvas">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className="object-cover"
+      />
+    </div>
+  );
+}
 
 function MetaRow({ label, value }: { label: string; value: string }) {
   return (
@@ -49,7 +80,11 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
           <span className="text-xs text-muted">{study.period}</span>
         </div>
 
-        <h3 className="mt-5 text-2xl font-semibold tracking-tight text-ink sm:text-[26px]">
+        <div className="mt-5">
+          <CoverImage src={study.coverImage} alt={study.title} />
+        </div>
+
+        <h3 className="mt-6 text-2xl font-semibold tracking-tight text-ink sm:text-[26px]">
           {study.title}
         </h3>
         {study.fullTitle ? (
