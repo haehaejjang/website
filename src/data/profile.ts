@@ -20,10 +20,10 @@ export const profile = {
   phone: "010-5919-9613",
 
   // 기존 코드 호환용
-  portfolioPdf: "/portfolio.pdf",
+  portfolioPdf: "/pdf/Mainportfolio.pdf",
 
   // 새 버튼 링크용: 실제 Google Drive 링크로 교체하세요.
-  portfolioUrl: "https://drive.google.com/file/d/PORTFOLIO_FILE_ID/view?usp=sharing",
+  portfolioUrl: "https://drive.google.com/file/d/1dCXHwdm6MhzDp_rkS8hHKNbvK5_-lqzh/view?usp=drive_link",
   resumeUrl: "#",
 
   emailSubject: "게임 기획자 포트폴리오 문의드립니다",
