@@ -5,6 +5,7 @@ export const profile = {
   tagline: "콘텐츠 · 시스템 · 시나리오 기획",
   heroDescription:
     "플레이어의 행동 루프와 선택 경험을 분석하고,\n이를 시스템 구조·데이터 테이블·시나리오 플로우로 구체화합니다.",
+    "실현 가능한 기획과 이해 가능한 기획서를 작성합니다.",
   mission:
     "콘텐츠·시스템·시나리오를 연결해 플레이 경험을 설계하고, 개발자와 아티스트가 구현하기 쉬운 형태로 기획을 문서화하는 게임 기획자.",
   heroKeywords: [
@@ -13,6 +14,8 @@ export const profile = {
     "Scenario Design",
     "Documentation",
     "Unity / Unreal",
+    "Dot Design",
+    "Vibe Coding with AI",
   ],
   email: "judys_bb@naver.com",
   phone: "010-5919-9613",
@@ -20,9 +23,9 @@ export const profile = {
   portfolioPdf: "/portfolio.pdf",
   resumeUrl: "#",
   links: [
-    { label: "GitHub", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Notion", href: "#" },
+    { label: "GitHub", href: "https://github.com/haehaejjang" },
+    { label: "Blog", href: "https://blog.naver.com/judys_bb" },
+    { label: "Notion", href: "https://automatic-slipper-285.notion.site/Portfolio-03f3c1335d214596b554b8e61db76ff0?pvs=74" },
   ],
   about: [
     "중앙대학교 국어국문학과와 게임 인터랙티브 미디어 융합전공을 이수하며, 서사 구조와 게임 제작을 함께 학습했습니다.",
