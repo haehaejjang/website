@@ -29,10 +29,7 @@ export type CaseStudy = {
   affiliation?: string;
   motif?: string;
   role: string;
-  externalLinks?: {
-    label: string;
-    href: string;
-  }[];
+  externalLinks?: ExternalLink[];
   summary: string;
   skills: string[];
   /** 카드 상단 대표 이미지 (public/images 기준 경로). 없으면 placeholder 표시 */
@@ -186,8 +183,59 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
-    id: "darkness",
+    id: "mu-monarch2-mount",
     index: "04",
+    title: "뮤 모나크2 탈 것 시스템 개선",
+    fullTitle: "뮤 모나크2 개선 탈 것 시스템 제안서",
+    genre: "개인 작업 · MMORPG 시스템 제안",
+    period: "2026",
+    role: "시스템 분석 · 개선안 기획 · 데이터 테이블 설계",
+    externalLinks: [
+      {
+        label: "제안서 링크",
+        href: "https://drive.google.com/file/d/1XoW25yvvaqwERJvdrHIlQacBtiHXBH0a/view?usp=drive_link",
+      },
+    ],
+    coverImage: "/images/mu-cover.png",
+    summary:
+      "넓은 맵과 산개된 사냥터로 생기는 이동 부담, 기존 탈 것 시스템의 낮은 콘텐츠성을 문제로 보고 이동 · 성장 · 수집 · BM을 연결한 탈 것 시스템 개선안을 설계했습니다.",
+    skills: ["System Design", "UX Design", "Data Table", "Live Service Analysis"],
+    detail: {
+      problem:
+        "뮤 모나크2는 빠른 성장과 자동 사냥을 중심으로 한 방치형 MMORPG입니다. 효율이 중요한 게임 구조지만, 넓은 맵과 산개된 사냥터로 이동 시간이 늘어나고, 기존 랜덤 이동 인장은 원하는 지점으로 확정 이동하기 어렵습니다. 기존 탈 것 시스템도 이동 속도 증가와 단순 도감에 머물러 콘텐츠 확장성이 낮다고 판단했습니다.",
+      designIntent:
+        "탈 것을 단순 이동 수단으로 두지 않고, 빠른 이동과 자동 사냥 연계, 강화 성장, 도감 보상, 고등급 탈 것 기능까지 연결한 성장형 시스템으로 확장하고자 했습니다.",
+      solution: [
+        "미니맵에서 목표 지점을 선택하면 예상 이동 시간에 따라 도보 이동과 탈 것 자동 탑승이 나뉘는 이동 구조를 설계했습니다.",
+        "목표 지점 도착 후 자동 사냥으로 이어지는 흐름을 구성해 방치형 MMORPG의 효율 중심 플레이와 연결했습니다.",
+        "탈 것 등급을 일반 / 에픽 / 전설 / 신화로 구분하고, 등급별 이동 속도와 고급 기능 차이를 설정했습니다.",
+        "탈 것 강화 시스템을 추가해 단계별 옵션 개방과 이펙트 보상을 설계했습니다.",
+        "탈 것 도감을 수집 콘텐츠로 확장하고, 보유도와 강화 진척도에 따라 재화와 영구 스탯 보상을 받을 수 있도록 구성했습니다.",
+        "신화 등급 탈 것에는 텔레포트 기능을 부여해 기존 랜덤 이동 인장의 불확실성을 보완했습니다.",
+      ],
+      implementation: [
+        "신규 탈 것 시스템의 기본 기능, 탑승 조건, 전투 중 사용 제한, 이동 속도 수치를 표로 정리했습니다.",
+        "미니맵 선택 → 이동 방식 판단 → 일반 이동 또는 고급 이동 → 목적지 도착 → 자동 사냥 재개로 이어지는 플로우차트를 작성했습니다.",
+        "강화 단계별 성공률, 소모 재화, 옵션 개방 시점을 데이터 테이블로 설계했습니다.",
+        "도감 보유도 보상과 도감 강화 진척도 보상을 분리해 수집 보상 구조를 구성했습니다.",
+        "탈 것 마스터 테이블, 강화 단계 테이블, 도감 보유도 보상 테이블, 도감 강화 진척도 보상 테이블을 부록으로 작성했습니다.",
+      ],
+      result: [
+        "기존 탈 것 시스템을 이동 편의 기능에서 성장형 콘텐츠로 확장하는 개선안을 제작했습니다.",
+        "이동 시간 단축, 탈 것 보유 수, 평균 강화 단계, 도감 보상 수령 수, 고등급 탈 것 획득률 등으로 확인 가능한 KPI를 제시했습니다.",
+        "고등급 탈 것 과가치화, 도감 보상 과도화, 기존 이동 아이템 가치 하락, 강화 피로도, UI 복잡도 증가에 대한 대응 방안을 정리했습니다.",
+      ],
+    },
+    placeholders: [
+      { label: "SYSTEM FLOW", image: "/images/mu-systemflow.png" },
+      { label: "ENHANCE UI", image: "/images/mu-enhanceui.png" },
+      { label: "COLLECTION UI", image: "/images/mu-collectionui.png" },
+      { label: "DATA TABLE", image: "/images/mu-datatable.png" },
+    ],
+  },
+  {
+    id: "darkness",
+    index: "05",
     title: "어둠",
     genre: "스토리형 공포 탈출 / 2D 사이드뷰",
     period: "2024.07 – 2024.08",
@@ -226,7 +274,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "forest-child",
-    index: "05",
+    index: "06",
     title: "숲의 아이",
     genre: "스토리형 어드벤처 / 2D 탑뷰 픽셀",
     period: "2023.03 – 2023.12",
