@@ -3,6 +3,7 @@ export type Project = {
   genre: string;
   role: string;
   experience: string;
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -11,28 +12,35 @@ export const projects: Project[] = [
     genre: "턴제 로그라이트 / 2D 도트",
     role: "팀장 · 기획 · 아트",
     experience: "전투 루프와 몬스터 패턴 설계",
+    image: "/images/memory-loss.png",
   },
   {
     title: "그대는 나의 천사",
     genre: "서브컬처 비주얼노벨",
     role: "전체 기획 · 시나리오",
     experience: "호감도 기반 분기와 대사 작성",
+    image: "/images/angel.png",
   },
   {
     title: "LUCID DREAM",
     genre: "로그라이트",
     role: "기획 · 서브 컨셉 아트",
     experience: "반복 전투 구조와 콘셉트 보조",
+    image: "/images/lucid-dream.png",
   },
   {
     title: "도키도키 교수님과 … 대학원생 대축제!!!",
     genre: "개그 비주얼노벨",
     role: "기획 · 마케팅 · 아트",
     experience: "가벼운 톤의 캐릭터 대사와 홍보 경험",
+    image: "/images/dokidoki-professor.png",
   },
 ];
 
-export type WritingItem = { title: string; description: string };
+export type WritingItem = {
+  title: string;
+  description: string;
+};
 
 export const writing: WritingItem[] = [
   { title: "숲의 아이", description: "동화 모티프 기반 어드벤처 시나리오" },
