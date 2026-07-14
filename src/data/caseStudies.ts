@@ -82,6 +82,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "IN GAME", image: "/images/tofu-ingame.png" },
       { label: "FLOWCHART", image: "/images/tofu-flowchart.png" },
       { label: "GOOGLE SHEET", image: "/images/tofu-googlesheet.png" },
+      { label: "DISPLAY", image: "/images/tofu-display.png" },
     ],
   },
   {
