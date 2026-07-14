@@ -30,10 +30,11 @@ export const profile = {
     "Unity, Unreal, 아트 툴을 직접 학습해 개발자와 아티스트가 이해하기 쉬운 기획서, 데이터 테이블, 플로우 문서를 작성합니다.",
   ],
   stats: [
-    { value: "4,400h+", label: "TalesRunner" },
-    { value: "6,000h+", label: "Lost Ark" },
-    { value: "10+", label: "Projects" },
-    { value: "3+", label: "Years Game Making" },
+    { value: "10개 이상", label: "프로젝트" },
+    { value: "4,400H+", label: "테일즈런너 플레이 시간" },
+    { value: "3년 이상", label: "게임 제작" },
+    { value: "2개 이상", label: "수상 경력" },
+    { value: "60개 이상", label: "게임 플레이 경험" },
   ],
 } as const;
 
