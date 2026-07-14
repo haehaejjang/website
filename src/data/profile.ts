@@ -23,7 +23,7 @@ export const profile = {
   portfolioPdf: "/pdf/Mainportfolio.pdf",
 
   // 새 버튼 링크용: 실제 Google Drive 링크로 교체하세요.
-  portfolioUrl: "https://drive.google.com/file/d/1dCXHwdm6MhzDp_rkS8hHKNbvK5_-lqzh/view?usp=drive_link",
+  portfolioUrl: "/pdf/Mainportfolio.pdf",
   resumeUrl: "#",
 
   emailSubject: "게임 기획자 포트폴리오 문의드립니다",
