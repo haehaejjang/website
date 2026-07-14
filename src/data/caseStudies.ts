@@ -5,6 +5,11 @@ export type Placeholder = {
   image?: string;
 };
 
+export type ExternalLink = {
+  label: string;
+  href: string;
+};
+
 export type CaseStudyDetail = {
   problem: string;
   designIntent: string;
@@ -84,6 +89,16 @@ export const caseStudies: CaseStudy[] = [
     affiliation: "미래내일 일경험 NCAI 1기 인턴",
     team: "5인 / Unity",
     role: "기획 · 클라이언트 · UI",
+    externalLinks: [
+      {
+        label: "포트폴리오 링크",
+        href: "https://drive.google.com/file/d/1cRgJlZfMrQ5_leAeA-uhjja-dWjmw-3i/view?usp=drive_link",
+      },
+      {
+        label: "인게임 영상",
+        href: "https://drive.google.com/file/d/1e3k6z0PDHU-MrapLwAjq59ROqGVP2BP1/view?usp=drive_link",
+      },
+    ],
     coverImage: "/images/unhinged-cover.png",
     summary:
       "기존 공포 퍼즐의 ‘열쇠를 찾아 문을 여는’ 구조를 비틀어, 문 자체를 떼어내고 배치하는 핵심 메카닉을 설계했습니다.",
