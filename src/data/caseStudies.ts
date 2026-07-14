@@ -52,6 +52,12 @@ export const caseStudies: CaseStudy[] = [
     period: "2026.03 – 2026.05",
     team: "4인 / Unreal Engine",
     role: "전체 기획 · 시나리오 총괄",
+    externalLinks: [
+      {
+        label: "포트폴리오 링크",
+        href: "https://drive.google.com/file/d/1cRgJlZfMrQ5_leAeA-uhjja-dWjmw-3i/view?usp=drive_link",
+      },
+    ],
     coverImage: "/images/tofu-cover.png",
     summary:
       "선택 결과가 엔딩에서만 드러나는 비주얼노벨의 약점을 보완하기 위해, 낮 탐색 → 오후 선택 → 밤 결과 회수 구조를 설계하여 Day 별로 관리할 수 있는 선택지를 제공했습니다.",
@@ -138,7 +144,17 @@ export const caseStudies: CaseStudy[] = [
     title: "Lost Ark 시스템 역기획",
     genre: "개인 작업 · 라이브 서비스 분석",
     period: "2025.12 – 2026.02",
-    role: "카오스 던전 · 쿠르잔 전선 분석",
+    role: "라이브 게임의 일일 숙제인 카오스 던전 및 쿠르잔 전선 분석 및 대안책 제시",
+    externalLinks: [
+      {
+        label: "분석 포트폴리오 링크",
+        href: "https://drive.google.com/file/d/1NPmtHiBPu6ZHQICUkOZC0BaZkOLlm43F/view?usp=drive_link",
+      },
+      {
+        label: "대안책 포트폴리오 링크",
+        href: "https://drive.google.com/file/d/12UsLntVv6hSS7lQ9mY-xIjoGs0cncvnn/view?usp=drive_link",
+      },
+    ],
     coverImage: "/images/lostark-cover.png",
     summary:
       "반복 콘텐츠의 피로 원인을 보상 누락 압박과 다캐릭터 숙제 부담으로 정의하고, 보상 루프 개선안을 제안했습니다.",
@@ -175,7 +191,13 @@ export const caseStudies: CaseStudy[] = [
     title: "어둠",
     genre: "스토리형 공포 탈출 / 2D 사이드뷰",
     period: "2024.07 – 2024.08",
-    role: "PM 겸 기획자",
+    role: "PM · 기획 · 아트",
+    externalLinks: [
+      {
+        label: "포트폴리오 링크",
+        href: "https://drive.google.com/file/d/1v4o3Jzs9lzBuBluoEZy82kZyVdLPPLnt/view?usp=drive_link",
+      },
+    ],
     coverImage: "/images/darkness-cover.png",
     summary:
       "기획, 아트, 개발 간 해석 차이로 작업 기준이 흔들리는 문제를 문서화와 우선순위 정리로 해결했습니다.",
