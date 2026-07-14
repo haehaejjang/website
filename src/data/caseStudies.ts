@@ -29,6 +29,10 @@ export type CaseStudy = {
   affiliation?: string;
   motif?: string;
   role: string;
+  externalLinks?: {
+    label: string;
+    href: string;
+  }[];
   summary: string;
   skills: string[];
   /** 카드 상단 대표 이미지 (public/images 기준 경로). 없으면 placeholder 표시 */
