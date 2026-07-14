@@ -196,7 +196,7 @@ export const caseStudies: CaseStudy[] = [
         href: "https://drive.google.com/file/d/1XoW25yvvaqwERJvdrHIlQacBtiHXBH0a/view?usp=drive_link",
       },
     ],
-    coverImage: "/images/mu-cover.png",
+    coverImage: "/images/mu-cover.jpg",
     summary:
       "넓은 맵과 산개된 사냥터로 생기는 이동 부담, 기존 탈 것 시스템의 낮은 콘텐츠성을 문제로 보고 이동 · 성장 · 수집 · BM을 연결한 탈 것 시스템 개선안을 설계했습니다.",
     skills: ["System Design", "UX Design", "Data Table", "Live Service Analysis"],
@@ -227,10 +227,10 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     placeholders: [
-      { label: "SYSTEM FLOW", image: "/images/mu-systemflow.png" },
-      { label: "ENHANCE UI", image: "/images/mu-enhanceui.png" },
-      { label: "COLLECTION UI", image: "/images/mu-collectionui.png" },
-      { label: "DATA TABLE", image: "/images/mu-datatable.png" },
+      { label: "SYSTEM FLOW", image: "/images/mu-systemflow.jpg" },
+      { label: "ENHANCE UI", image: "/images/mu-enhanceui.jpg" },
+      { label: "COLLECTION UI", image: "/images/mu-collectionui.jpg" },
+      { label: "DATA TABLE", image: "/images/mu-datatable.jpg" },
     ],
   },
   {
