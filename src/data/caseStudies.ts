@@ -54,6 +54,10 @@ export const caseStudies: CaseStudy[] = [
         label: "포트폴리오 링크",
         href: "https://drive.google.com/file/d/1cRgJlZfMrQ5_leAeA-uhjja-dWjmw-3i/view?usp=drive_link",
       },
+      {
+        label: "인게임 영상",
+        href: "https://drive.google.com/file/d/1fvFr9X_GnNFZPYikF3elzPqzYA9wONCY/view?usp=drive_link",
+      },
     ],
     coverImage: "/images/tofu-cover.png",
     summary:
