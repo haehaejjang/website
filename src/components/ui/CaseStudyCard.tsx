@@ -166,6 +166,23 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
           {study.motif ? <MetaRow label="Motif" value={study.motif} /> : null}
         </dl>
 
+              {study.externalLinks?.length ? (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {study.externalLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
+            >
+              {link.label}
+              <ArrowUpRight size={13} />
+            </a>
+          ))}
+        </div>
+      ) : null}
+
         <div className="mt-8 space-y-6">
           <DetailBlock label="Problem">
             <p>{detail.problem}</p>
