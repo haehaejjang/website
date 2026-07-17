@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
@@ -36,7 +37,7 @@ export function Hero() {
         animate="show"
         className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]"
       >
-        <div>
+        <div className="min-w-0">
           <motion.p
             variants={item}
             className="text-sm font-semibold uppercase tracking-[0.35em] text-muted"
@@ -60,16 +61,13 @@ export function Hero() {
 
           <motion.p
             variants={item}
-            className="mt-6 max-w-2xl whitespace-pre-line text-base leading-8 text-muted sm:text-lg"
+            className="mt-6 max-w-2xl whitespace-pre-line break-keep text-base leading-8 text-muted sm:text-lg"
           >
             {profile.heroDescription}
           </motion.p>
 
           <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
-            <Button
-              href="#case-studies"
-              icon={<ArrowRight size={17} />}
-            >
+            <Button href="#case-studies" icon={<ArrowRight size={17} />}>
               View Case Studies
             </Button>
 
@@ -82,19 +80,12 @@ export function Hero() {
               View Portfolio
             </Button>
 
-            <Button
-              href="#contact"
-              variant="ghost"
-              icon={<Mail size={17} />}
-            >
+            <Button href="#contact" variant="ghost" icon={<Mail size={17} />}>
               Contact
             </Button>
           </motion.div>
 
-          <motion.ul
-            variants={item}
-            className="mt-9 flex flex-wrap gap-2"
-          >
+          <motion.ul variants={item} className="mt-9 flex flex-wrap gap-2">
             {profile.heroKeywords.map((keyword) => (
               <li
                 key={keyword}
@@ -106,20 +97,19 @@ export function Hero() {
           </motion.ul>
         </div>
 
-        <motion.div
-          variants={item}
-          className="relative"
-          aria-label="Portfolio visual"
-        >
+        <motion.div variants={item} className="relative min-w-0">
           <div className="absolute -left-8 -top-8 h-40 w-40 rounded-full bg-accent/10 blur-3xl" />
           <div className="absolute -bottom-8 -right-8 h-48 w-48 rounded-full bg-ink/10 blur-3xl" />
 
           <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface p-4 shadow-card">
-            <div className="overflow-hidden rounded-[1.5rem] border border-line bg-canvas">
-              <img
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.5rem] border border-line bg-canvas">
+              <Image
                 src="/images/hero-visual.png"
                 alt="안세은 게임 기획 포트폴리오 대표 이미지"
-                className="h-full max-h-[520px] w-full object-contain"
+                fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-contain"
+                priority
               />
             </div>
 
