@@ -28,6 +28,29 @@ const item = {
   },
 };
 
+const heroProjects = [
+  {
+    title: "HELP!!!",
+    image: "/images/tofu-cover.png",
+    label: "Scenario",
+  },
+  {
+    title: "UNHINGED",
+    image: "/images/unhinged-cover.png",
+    label: "System",
+  },
+  {
+    title: "Lost Ark",
+    image: "/images/lostark-cover.png",
+    label: "Analysis",
+  },
+  {
+    title: "어둠",
+    image: "/images/darkness-cover.png",
+    label: "PM",
+  },
+];
+
 export function Hero() {
   return (
     <section className="min-h-[calc(100vh-88px)] overflow-hidden px-6 pb-24 pt-32 sm:px-8 sm:pt-36 lg:pt-40">
@@ -108,16 +131,44 @@ export function Hero() {
           <div className="absolute -left-8 -top-8 h-40 w-40 rounded-full bg-accent/10 blur-3xl" />
           <div className="absolute -bottom-8 -right-8 h-48 w-48 rounded-full bg-ink/10 blur-3xl" />
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface p-4 shadow-card">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.5rem] border border-line bg-canvas">
-              <Image
-                src="/images/hero-visual.png"
-                alt="안세은 게임 기획 포트폴리오 대표 이미지"
-                fill
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-contain"
-                priority
-              />
+          <div className="relative rounded-[2rem] border border-line bg-surface p-4 shadow-card">
+            <div className="grid grid-cols-2 gap-3">
+              {heroProjects.map((project, index) => (
+                <div
+                  key={project.title}
+                  className={
+                    index === 0
+                      ? "group relative col-span-2 aspect-[16/7] overflow-hidden rounded-[1.4rem] border border-line bg-canvas"
+                      : "group relative aspect-[4/3] overflow-hidden rounded-[1.4rem] border border-line bg-canvas"
+                  }
+                >
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} 대표 이미지`}
+                    fill
+                    sizes={
+                      index === 0
+                        ? "(max-width: 1024px) 100vw, 45vw"
+                        : "(max-width: 1024px) 50vw, 22vw"
+                    }
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                    priority={index === 0}
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+
+                  <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-3">
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70">
+                        {project.label}
+                      </p>
+                      <p className="mt-1 text-sm font-semibold text-white">
+                        {project.title}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div className="mt-4 grid grid-cols-3 gap-3 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
