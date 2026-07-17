@@ -5,11 +5,11 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="rounded-2xl border border-line bg-surface p-6 shadow-sm transition hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg">
       {project.image ? (
-        <div className="mb-5 overflow-hidden rounded-xl border border-line bg-canvas">
+        <div className="mb-5 flex h-32 items-center justify-center overflow-hidden rounded-xl border border-line bg-canvas">
           <img
             src={project.image}
             alt={`${project.title} 대표 이미지`}
-            className="h-28 w-full object-cover"
+            className="h-full w-full object-contain"
             loading="lazy"
           />
         </div>
