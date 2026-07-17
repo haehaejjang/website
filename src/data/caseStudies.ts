@@ -119,7 +119,7 @@ export const caseStudies: CaseStudy[] = [
       problem:
         "탈출형 공포 게임은 ‘열쇠를 찾고 문을 여는’ 구조가 반복되면 퍼즐 경험이 단조로워질 수 있습니다. 또한 공포 연출과 퍼즐 시스템이 분리되면, 플레이어는 시스템을 단순 장애물 처리로만 받아들일 위험이 있습니다.",
       designIntent:
-        "문을 단순히 여는 대상이 아니라, 플레이어가 직접 이동시키고 배치하는 핵심 오브젝트로 전환하고자 했습니다. 문이 공간의 경계를 바꾸는 장치가 되면, 퍼즐과 공포 연출을 동시에 강화할 수 있다고 판단했습니다.",
+        "문을 플레이어가 직접 이동시키고 배치하는 핵심 오브젝트로 전환하고자 했습니다. 문이 공간의 경계를 바꾸는 장치가 되면, 퍼즐과 공포 연출을 동시에 강화할 수 있다고 판단했습니다.",
       solution: [
         "문을 떼어 다른 벽에 부착하는 핵심 조작을 설계했습니다.",
         "문 배치에 따라 이동 동선과 위험 구간이 달라지는 퍼즐 구조를 구성했습니다.",
@@ -137,6 +137,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "LEVEL DESIGN", image: "/images/unhinged-leveldesign.png" },
       { label: "MAP", image: "/images/unhinged-map.png" },
       { label: "DIARY", image: "/images/unhinged-diary.png" },
+      { label: "REWARD", image: "/images/Reward.png" },
     ],
   },
   {
