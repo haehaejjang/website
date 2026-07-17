@@ -1,14 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { useState, type ReactNode } from "react";
 import { ArrowUpRight } from "lucide-react";
 import type { CaseStudy } from "@/data/caseStudies";
 import { Tag } from "./Tag";
 import { Modal } from "./Modal";
 import { Placeholder } from "./Placeholder";
 
-/** 카드 상단 대표 이미지. coverImage가 없으면 PROJECT IMAGE placeholder. */
+/** 카드 상단 대표 이미지. coverImage가 없거나 로딩에 실패하면 PROJECT IMAGE placeholder 표시 */
 function CoverImage({
   src,
   alt,
@@ -16,7 +15,9 @@ function CoverImage({
   src?: string;
   alt: string;
 }) {
-  if (!src) {
+  const [failed, setFailed] = useState(false);
+
+  if (!src || failed) {
     return (
       <Placeholder
         label="PROJECT IMAGE"
@@ -25,16 +26,51 @@ function CoverImage({
       />
     );
   }
+
   return (
     <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-line bg-canvas">
-      <Image
+      <img
         src={src}
         alt={alt}
-        fill
-        sizes="(max-width: 1024px) 100vw, 50vw"
-        className="object-cover"
+        className="h-full w-full object-contain"
+        loading="lazy"
+        onError={() => setFailed(true)}
       />
     </div>
+  );
+}
+
+/** 상세 Materials 이미지. 이미지가 없거나 로딩 실패 시 placeholder 표시 */
+function MaterialImage({
+  src,
+  label,
+  alt,
+}: {
+  src?: string;
+  label: string;
+  alt: string;
+}) {
+  const [failed, setFailed] = useState(false);
+
+  if (!src || failed) {
+    return <Placeholder label={label} />;
+  }
+
+  return (
+    <figure>
+      <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-line bg-canvas">
+        <img
+          src={src}
+          alt={alt}
+          className="h-full w-full object-contain"
+          loading="lazy"
+          onError={() => setFailed(true)}
+        />
+      </div>
+      <figcaption className="mt-2 text-[11px] font-medium uppercase tracking-[0.15em] text-muted">
+        {label}
+      </figcaption>
+    </figure>
   );
 }
 
@@ -52,7 +88,7 @@ function DetailBlock({
   children,
 }: {
   label: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <div className="border-t border-line pt-6">
@@ -62,6 +98,48 @@ function DetailBlock({
       <div className="mt-3 text-[15px] leading-relaxed text-ink/90">
         {children}
       </div>
+    </div>
+  );
+}
+
+function ExternalLinks({ study }: { study: CaseStudy }) {
+  if (!study.externalLinks?.length) return null;
+
+  return (
+    <div className="mt-4 flex flex-wrap gap-2">
+      {study.externalLinks.map((link) => (
+        <a
+          key={link.label}
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 rounded-full border border-line px-3 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
+        >
+          {link.label}
+          <ArrowUpRight size={13} />
+        </a>
+      ))}
+    </div>
+  );
+}
+
+function ExternalLinksInModal({ study }: { study: CaseStudy }) {
+  if (!study.externalLinks?.length) return null;
+
+  return (
+    <div className="mt-4 flex flex-wrap gap-2">
+      {study.externalLinks.map((link) => (
+        <a
+          key={link.label}
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
+        >
+          {link.label}
+          <ArrowUpRight size={13} />
+        </a>
+      ))}
     </div>
   );
 }
@@ -81,12 +159,13 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
         </div>
 
         <div className="mt-5">
-          <CoverImage src={study.coverImage} alt={study.title} />
+          <CoverImage src={study.coverImage} alt={`${study.title} 대표 이미지`} />
         </div>
 
         <h3 className="mt-6 text-2xl font-semibold tracking-tight text-ink sm:text-[26px]">
           {study.title}
         </h3>
+
         {study.fullTitle ? (
           <p className="mt-2 text-sm text-muted">{study.fullTitle}</p>
         ) : null}
@@ -104,22 +183,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
           {study.motif ? <MetaRow label="Motif" value={study.motif} /> : null}
         </dl>
 
-              {study.externalLinks?.length ? (
-        <div className="mt-4 flex flex-wrap gap-2">
-          {study.externalLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 rounded-full border border-line px-3 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
-            >
-              {link.label}
-              <ArrowUpRight size={13} />
-            </a>
-          ))}
-        </div>
-      ) : null}
+        <ExternalLinks study={study} />
 
         <p className="mt-6 flex-1 text-[15px] leading-relaxed text-ink/85">
           {study.summary}
@@ -148,12 +212,18 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
         <span className="text-sm font-semibold tracking-[0.2em] text-muted">
           CASE {study.index}
         </span>
+
         <h3 className="mt-3 text-3xl font-semibold tracking-tight text-ink">
           {study.title}
         </h3>
+
         {study.fullTitle ? (
           <p className="mt-2 text-sm text-muted">{study.fullTitle}</p>
         ) : null}
+
+        <div className="mt-6">
+          <CoverImage src={study.coverImage} alt={`${study.title} 대표 이미지`} />
+        </div>
 
         <dl className="mt-6 grid grid-cols-1 gap-2 rounded-xl border border-line bg-canvas p-5 sm:grid-cols-2">
           <MetaRow label="Genre" value={study.genre} />
@@ -166,22 +236,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
           {study.motif ? <MetaRow label="Motif" value={study.motif} /> : null}
         </dl>
 
-              {study.externalLinks?.length ? (
-        <div className="mt-4 flex flex-wrap gap-2">
-          {study.externalLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
-            >
-              {link.label}
-              <ArrowUpRight size={13} />
-            </a>
-          ))}
-        </div>
-      ) : null}
+        <ExternalLinksInModal study={study} />
 
         <div className="mt-8 space-y-6">
           <DetailBlock label="Problem">
@@ -229,27 +284,16 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
             <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               Materials
             </h4>
+
             <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {study.placeholders.map((p) =>
-                p.image ? (
-                  <figure key={p.label}>
-                    <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-line bg-canvas">
-                      <Image
-                        src={p.image}
-                        alt={`${study.title} — ${p.label}`}
-                        fill
-                        sizes="(max-width: 640px) 100vw, 360px"
-                        className="object-cover"
-                      />
-                    </div>
-                    <figcaption className="mt-2 text-[11px] font-medium uppercase tracking-[0.15em] text-muted">
-                      {p.label}
-                    </figcaption>
-                  </figure>
-                ) : (
-                  <Placeholder key={p.label} label={p.label} />
-                ),
-              )}
+              {study.placeholders.map((p) => (
+                <MaterialImage
+                  key={p.label}
+                  src={p.image}
+                  label={p.label}
+                  alt={`${study.title} — ${p.label}`}
+                />
+              ))}
             </div>
           </div>
         </div>
