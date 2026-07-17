@@ -30,31 +30,38 @@ const item = {
 
 export function Hero() {
   return (
-    <section className="section-padding min-h-[calc(100vh-88px)] overflow-hidden">
+    <section className="min-h-[calc(100vh-88px)] overflow-hidden px-6 pb-24 pt-32 sm:px-8 sm:pt-36 lg:pt-40">
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]"
+        className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]"
       >
         <div className="min-w-0">
           <motion.p
             variants={item}
             className="text-sm font-semibold uppercase tracking-[0.35em] text-muted"
           >
-            {profile.role}
+            Game Designer
+          </motion.p>
+
+          <motion.p
+            variants={item}
+            className="mt-5 text-sm font-semibold uppercase tracking-[0.35em] text-ink"
+          >
+            {profile.nameEn}
           </motion.p>
 
           <motion.h1
             variants={item}
-            className="mt-5 text-5xl font-semibold tracking-tight text-ink sm:text-6xl lg:text-7xl"
+            className="mt-3 text-5xl font-semibold leading-none tracking-tight text-ink sm:text-6xl lg:text-7xl"
           >
             {profile.name}
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="mt-5 text-xl font-medium text-ink/80"
+            className="mt-8 text-xl font-medium text-ink/80"
           >
             {profile.tagline}
           </motion.p>
@@ -66,7 +73,7 @@ export function Hero() {
             {profile.heroDescription}
           </motion.p>
 
-          <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
+          <motion.div variants={item} className="mt-9 flex flex-wrap gap-3">
             <Button href="#case-studies" icon={<ArrowRight size={17} />}>
               View Case Studies
             </Button>
@@ -85,7 +92,7 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          <motion.ul variants={item} className="mt-9 flex flex-wrap gap-2">
+          <motion.ul variants={item} className="mt-10 flex flex-wrap gap-2">
             {profile.heroKeywords.map((keyword) => (
               <li
                 key={keyword}
