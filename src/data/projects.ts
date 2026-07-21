@@ -1,10 +1,15 @@
+export type ProjectLink = {
+  label: string;
+  href: string;
+};
+
 export type Project = {
   title: string;
   genre: string;
   role: string;
   experience: string;
   image?: string;
-  externalLinks?: { label: string; href: string }[]; // externalLinks 타입 추가
+  externalLinks?: ProjectLink[];
 };
 
 export const projects: Project[] = [
@@ -33,15 +38,15 @@ export const projects: Project[] = [
     title: "BEAT2:)S",
     genre: "리듬 게임",
     role: "기획 · 프로그래밍",
-    experience: "가벼운 분위기의 리듬 게임 구상 및 유니티 프로그래밍 경험",
+    experience: "가벼운 분위기의 리듬 게임 구성 및 유니티 프로그래밍 경험",
     image: "/images/beat2s.png",
     externalLinks: [
       {
-        label: "플레이 영상 링크",
-        href: "https://drive.google.com/file/d/1Y__3oq42QZB7tMK1yfkygzmzznFNxAfe/view?usp=sharing",
+        label: "인게임 영상",
+        href: "https://drive.google.com/file/d/1MtTo_5T5Y6shE1-qxPpZbBG3ON7NP3ld/view?usp=sharing",
       },
-    ], // 닫는 대괄호 추가
-  }, // 닫는 중괄호 추가
+    ],
+  },
   {
     title: "도키도키 교수님과 … 대학원생 대축제!!!",
     genre: "개그 비주얼노벨",
@@ -51,10 +56,7 @@ export const projects: Project[] = [
   },
 ];
 
-export type WritingItem = {
-  title: string;
-  description: string;
-};
+export type WritingItem = { title: string; description: string };
 
 export const writing: WritingItem[] = [
   { title: "숲의 아이", description: "동화 모티프 기반 어드벤처 시나리오" },
