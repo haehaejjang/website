@@ -19,10 +19,7 @@ export const profile = {
   email: "judys_bb@naver.com",
   phone: "010-5919-9613",
 
-  // 기존 코드 호환용
   portfolioPdf: "/pdf/Mainportfolio.pdf",
-
-  // 새 버튼 링크용: 실제 Google Drive 링크로 교체하세요.
   portfolioUrl: "/pdf/Mainportfolio.pdf",
   resumeUrl: "#",
 
