@@ -1,10 +1,16 @@
 export type CareerCategory = "프로젝트" | "활동" | "수상" | "경력";
 
+export type CareerLink = {
+  label: string;
+  href: string;
+};
+
 export type CareerItem = {
   period: string;
   category: CareerCategory;
   title: string;
   description?: string;
+  externalLinks?: CareerLink[];
 };
 
 export const career: CareerItem[] = [
@@ -47,6 +53,16 @@ export const career: CareerItem[] = [
     category: "활동",
     title: "컴투스 멘토링 스쿨 클라이언트 부문 1기",
     description: "Unity C# 기반 리듬 게임 BEAT:)S 제작",
+    externalLinks: [
+      {
+        label: "포트폴리오 링크",
+        href: "https://drive.google.com/file/d/BEATS_PORTFOLIO_FILE_ID/view?usp=drive_link",
+      },
+      {
+        label: "인게임 영상",
+        href: "https://drive.google.com/file/d/BEATS_VIDEO_FILE_ID/view?usp=drive_link",
+      },
+    ],
   },
   {
     period: "2024.03 – 2024.07",
