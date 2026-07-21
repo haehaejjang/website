@@ -53,7 +53,7 @@ export const caseStudies: CaseStudy[] = [
     externalLinks: [
       {
         label: "포트폴리오 링크",
-        href: "https://drive.google.com/file/d/1cRgJlZfMrQ5_leAeA-uhjja-dWjmw-3i/view?usp=drive_link",
+        href: "https://drive.google.com/file/d/1EcS-6rS5pVGpCEYFKxL-Xkm41o1apgwK/view?usp=sharing",
       },
       {
         label: "인게임 영상",
