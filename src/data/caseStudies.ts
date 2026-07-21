@@ -139,7 +139,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "LEVEL DESIGN", image: "/images/unhinged-leveldesign.png" },
       { label: "MAP", image: "/images/unhinged-map.png" },
       { label: "DIARY", image: "/images/unhinged-diary.png" },
-      { label: "수료증", image: "/images/ncai.jpg" },
+      { label: "수료증", image: "/images/ncai.png" },
       { label: "REWARD", image: "/images/Reward.jpg" },
     ],
   },
