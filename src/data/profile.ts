@@ -21,7 +21,7 @@ export const profile = {
 
   portfolioPdf: "/pdf/Mainportfolio.pdf",
   portfolioUrl: "/pdf/Mainportfolio.pdf",
-  resumeUrl: "https://drive.google.com/file/d/1-sk6m5SwL09F6gP61EyozSENv60N-S4R/view?usp=sharing";
+  resumeUrl: "/pdf/MainResume.pdf";
 
 import { useState } from "react";
 import { Check, Copy, Download, FileText, Mail } from "lucide-react";
