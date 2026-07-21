@@ -26,7 +26,7 @@ export function Contact() {
         <div className="max-w-lg">
           <SectionTitle
             eyebrow="CONTACT"
-            title="연락 주세요"
+            title="기타 정보"
             description="포트폴리오, 이력서, Notion 자료는 아래 버튼으로 확인할 수 있습니다. 프로젝트 제안, 협업이나 채용 관련 문의는 이메일로 연락 주세요."
           />
         </div>
