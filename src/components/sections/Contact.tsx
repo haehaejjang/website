@@ -1,108 +1,75 @@
 import { Download, FileText, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import { Button } from "@/components/ui/Button";
-import { Reveal } from "@/components/ui/Reveal";
 
 export function Contact() {
+  const emailSubject =
+    profile.emailSubject ?? "게임 기획자 포트폴리오 문의드립니다";
+
+  const emailBody =
+    profile.emailBody ??
+    "안녕하세요, 안세은 님.\n포트폴리오를 확인하고 연락드립니다.\n\n문의 내용:\n";
+
+  const emailHref = `mailto:${profile.email}?subject=${encodeURIComponent(
+    emailSubject,
+  )}&body=${encodeURIComponent(emailBody)}`;
+
   return (
-    <section id="contact" className="section-pad border-t border-line">
-      <div className="container-content">
+    <section id="contact" className="section-padding bg-surface">
+      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <SectionTitle
-          eyebrow="Contact"
-          title="좋은 경험을 설계하는 기획자"
+          eyebrow="CONTACT"
+          title="함께 이야기할 수 있습니다"
+          description="포트폴리오와 이력서는 아래 버튼으로 확인할 수 있습니다. 프로젝트 제안, 협업이나 채용 관련 문의는 이메일로 편하게 연락 주세요."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-6">
-            <Reveal>
-              <p className="text-2xl font-semibold tracking-tight text-ink">
-                {profile.name}
-              </p>
-              <p className="mt-1 text-muted">{profile.role}</p>
+        <div className="rounded-2xl border border-line bg-canvas p-7 shadow-sm sm:p-9">
+          <p className="text-sm leading-7 text-muted">
+            포트폴리오와 이력서는 아래 버튼으로 확인할 수 있습니다.
+            게임 기획, 콘텐츠 기획, 시스템 문서화, 시나리오 설계와 관련된
+            문의는 이메일로 연락 주세요.
+          </p>
 
-              <dl className="mt-8 space-y-4">
-                <div className="flex flex-col gap-1">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-                    Email
-                  </dt>
-                  <dd>
-                    <a
-                      href={`mailto:${profile.email}`}
-                      className="text-lg text-ink transition hover:text-accent"
-                    >
-                      {profile.email}
-                    </a>
-                  </dd>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-                    Phone
-                  </dt>
-                  <dd>
-                    <a
-                      href={`tel:${profile.phone.replace(/-/g, "")}`}
-                      className="text-lg text-ink transition hover:text-accent"
-                    >
-                      {profile.phone}
-                    </a>
-                  </dd>
-                </div>
-              </dl>
+          <div className="mt-8 flex flex-col gap-3">
+            <a
+              href={emailHref}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-4 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-card"
+            >
+              Send Email
+              <Mail size={17} />
+            </a>
 
-              {/* 외부 링크 placeholder — 실제 URL로 교체하세요 */}
-              <div className="mt-8 flex flex-wrap gap-3">
-                {profile.links.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-dashed border-line px-4 py-2 text-xs font-medium uppercase tracking-[0.15em] text-muted transition hover:border-accent hover:text-ink"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </Reveal>
+            <a
+              href={profile.portfolioUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-surface px-5 py-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+            >
+              View Portfolio
+              <Download size={17} />
+            </a>
+
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-surface px-5 py-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+            >
+              View Resume
+              <FileText size={17} />
+            </a>
           </div>
 
-          <div className="md:col-span-6">
-            <Reveal delay={0.05}>
-              <div className="rounded-2xl border border-line bg-surface p-8 sm:p-10">
-                <p className="text-sm leading-relaxed text-muted">
-                  포트폴리오와 이력서는 아래 버튼으로 확인할 수 있습니다.\n
-                  기획 협업이나 채용 관련 문의는 이메일로 편하게 연락 주세요.
-                </p>
-                <div className="mt-8 flex flex-col gap-3">
-                  <Button
-                    href={`mailto:${profile.email}`}
-                    variant="primary"
-                    icon={<Mail size={16} />}
-                    className="w-full"
-                  >
-                    Send Email
-                  </Button>
-                  <Button
-                    href={profile.portfolioPdf}
-                    variant="secondary"
-                    download
-                    icon={<Download size={16} />}
-                    className="w-full"
-                  >
-                    Download Portfolio
-                  </Button>
-                  <Button
-                    href={profile.resumeUrl}
-                    variant="ghost"
-                    icon={<FileText size={16} />}
-                    className="w-full"
-                  >
-                    View Resume
-                  </Button>
-                </div>
-              </div>
-            </Reveal>
+          <div className="mt-8 rounded-xl border border-line bg-surface p-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+              Email
+            </p>
+            <a
+              href={emailHref}
+              className="mt-2 block text-sm font-medium text-ink underline-offset-4 hover:underline"
+            >
+              {profile.email}
+            </a>
           </div>
         </div>
       </div>
