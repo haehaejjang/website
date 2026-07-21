@@ -9,7 +9,7 @@ export function Career() {
       <div className="container-content">
         <SectionTitle
           eyebrow="Career"
-          title="함께 만든 기록"
+          title="활동 기록"
           description="프로젝트·활동·수상·경력을 시간 순으로 정리했습니다."
         />
 
