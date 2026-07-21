@@ -45,7 +45,6 @@ export const profile = {
 
   stats: [
     { value: "10개 이상", label: "프로젝트" },
-    { value: "4,400H+", label: "테일즈런너 플레이 시간" },
     { value: "3년 이상", label: "게임 제작" },
     { value: "2개 이상", label: "수상 경력" },
     { value: "60개 이상", label: "게임 플레이 경험" },
