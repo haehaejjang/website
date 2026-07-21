@@ -29,6 +29,18 @@ export const projects: Project[] = [
     image: "/images/lucid-dream.png",
   },
   {
+    title: "BEAT2:)S",
+    genre: "리듬 게임",
+    role: "기획 · 프로그래밍",
+    experience: "가벼운 분위기의 리듬 게임 구상 및 유니티 프로그래밍 경험",
+    image: "/images/beat2s.png",
+    externalLinks: [
+      {
+        label: "플레이 영상 링크",
+        href: "https://drive.google.com/file/d/1Y__3oq42QZB7tMK1yfkygzmzznFNxAfe/view?usp=sharing",
+      },
+  },
+  {
     title: "도키도키 교수님과 … 대학원생 대축제!!!",
     genre: "개그 비주얼노벨",
     role: "기획 · 마케팅 · 아트",
