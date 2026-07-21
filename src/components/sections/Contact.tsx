@@ -1,8 +1,13 @@
-import { Download, FileText, Mail } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { Check, Copy, Download, FileText, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function Contact() {
+  const [copied, setCopied] = useState(false);
+
   const emailSubject =
     profile.emailSubject ?? "게임 기획자 포트폴리오 문의드립니다";
 
@@ -14,26 +19,46 @@ export function Contact() {
     emailSubject,
   )}&body=${encodeURIComponent(emailBody)}`;
 
-  return (
-    <section id="contact" className="section-padding bg-surface">
-      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <SectionTitle
-          eyebrow="CONTACT"
-          title="함께 이야기할 수 있습니다"
-          description="포트폴리오와 이력서는 아래 버튼으로 확인할 수 있습니다. 프로젝트 제안, 협업이나 채용 관련 문의는 이메일로 편하게 연락 주세요."
-        />
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.email);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      window.location.href = emailHref;
+    }
+  };
 
-        <div className="rounded-2xl border border-line bg-canvas p-7 shadow-sm sm:p-9">
+  return (
+    <section id="contact" className="border-t border-line bg-surface px-6 py-24 sm:px-8">
+      <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+        <div className="max-w-xl">
+          <SectionTitle
+            eyebrow="CONTACT"
+            title="함께 이야기할 수 있습니다"
+            description="포트폴리오와 이력서는 아래 버튼으로 확인할 수 있습니다. 프로젝트 제안, 협업이나 채용 관련 문의는 이메일로 연락 주세요."
+          />
+        </div>
+
+        <div className="rounded-2xl border border-line bg-canvas p-6 shadow-sm sm:p-8">
           <p className="text-sm leading-7 text-muted">
-            포트폴리오와 이력서는 아래 버튼으로 확인할 수 있습니다.
-            게임 기획, 콘텐츠 기획, 시스템 문서화, 시나리오 설계와 관련된
-            문의는 이메일로 연락 주세요.
+            버튼을 누르면 포트폴리오와 이력서 PDF를 새 탭에서 확인할 수 있습니다.
+            이메일 버튼은 주소를 복사합니다.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3">
+          <div className="mt-7 flex flex-col gap-3">
+            <button
+              type="button"
+              onClick={handleCopyEmail}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-4 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-card"
+            >
+              {copied ? "이메일 복사됨" : "Copy Email"}
+              {copied ? <Check size={17} /> : <Copy size={17} />}
+            </button>
+
             <a
               href={emailHref}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-4 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-card"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-surface px-5 py-4 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-accent hover:text-accent"
             >
               Send Email
               <Mail size={17} />
@@ -60,16 +85,17 @@ export function Contact() {
             </a>
           </div>
 
-          <div className="mt-8 rounded-xl border border-line bg-surface p-5">
+          <div className="mt-7 rounded-xl border border-line bg-surface p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
               Email
             </p>
-            <a
-              href={emailHref}
-              className="mt-2 block text-sm font-medium text-ink underline-offset-4 hover:underline"
+            <button
+              type="button"
+              onClick={handleCopyEmail}
+              className="mt-2 block text-left text-sm font-medium text-ink underline-offset-4 hover:underline"
             >
               {profile.email}
-            </a>
+            </button>
           </div>
         </div>
       </div>
