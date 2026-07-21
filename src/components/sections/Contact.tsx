@@ -71,7 +71,7 @@ export function Contact() {
             <Reveal delay={0.05}>
               <div className="rounded-2xl border border-line bg-surface p-8 sm:p-10">
                 <p className="text-sm leading-relaxed text-muted">
-                  포트폴리오와 이력서는 아래 버튼으로 확인할 수 있습니다.
+                  포트폴리오와 이력서는 아래 버튼으로 확인할 수 있습니다.\n
                   기획 협업이나 채용 관련 문의는 이메일로 편하게 연락 주세요.
                 </p>
                 <div className="mt-8 flex flex-col gap-3">
