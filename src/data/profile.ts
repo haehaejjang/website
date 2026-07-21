@@ -21,7 +21,7 @@ export const profile = {
 
   portfolioPdf: "/pdf/Mainportfolio.pdf",
   portfolioUrl: "/pdf/Mainportfolio.pdf",
-  resumeUrl: "/pdf/MainResume.pdf";
+  resumeUrl: "/pdf/MainResume.pdf",
 
 import { useState } from "react";
 import { Check, Copy, Download, FileText, Mail } from "lucide-react";
