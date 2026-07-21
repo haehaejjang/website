@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import { career, collaborationStyle, categoryBadgeStyle } from "@/data/career";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Reveal } from "@/components/ui/Reveal";
@@ -37,32 +36,13 @@ export function Career() {
                           {entry.period}
                         </span>
                       </div>
-
                       <h3 className="mt-3 text-base font-semibold leading-snug tracking-tight text-ink sm:text-lg">
                         {entry.title}
                       </h3>
-
                       {entry.description ? (
                         <p className="mt-1.5 text-sm leading-relaxed text-muted">
                           {entry.description}
                         </p>
-                      ) : null}
-
-                      {entry.externalLinks?.length ? (
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          {entry.externalLinks.map((link) => (
-                            <a
-                              key={link.label}
-                              href={link.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 rounded-full border border-line px-3 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
-                            >
-                              {link.label}
-                              <ArrowUpRight size={13} />
-                            </a>
-                          ))}
-                        </div>
                       ) : null}
                     </div>
                   </li>
@@ -74,7 +54,7 @@ export function Career() {
           {/* Collaboration Style — 오른쪽 sticky card */}
           <div className="lg:col-span-4">
             <Reveal>
-              <div className="rounded-2xl border border-line bg-surface p-8 lg:sticky lg:top-28">
+              <div className="lg:sticky lg:top-28 rounded-2xl border border-line bg-surface p-8">
                 <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                   Collaboration Style
                 </h3>
