@@ -10,7 +10,7 @@ export function Contact() {
       <div className="container-content">
         <SectionTitle
           eyebrow="Contact"
-          title="함께 좋은 경험을 설계하고 싶습니다"
+          title="좋은 경험을 설계하는 기획자"
         />
 
         <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
