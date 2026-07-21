@@ -159,7 +159,10 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
         </div>
 
         <div className="mt-5">
-          <CoverImage src={study.coverImage} alt={`${study.title} 대표 이미지`} />
+          <CoverImage
+            src={study.coverImage}
+            alt={`${study.title} 대표 이미지`}
+          />
         </div>
 
         <h3 className="mt-6 text-2xl font-semibold tracking-tight text-ink sm:text-[26px]">
@@ -177,6 +180,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
         <dl className="mt-6 space-y-2">
           <MetaRow label="Role" value={study.role} />
           {study.team ? <MetaRow label="Team" value={study.team} /> : null}
+          {study.award ? <MetaRow label="수상" value={study.award} /> : null}
           {study.affiliation ? (
             <MetaRow label="소속" value={study.affiliation} />
           ) : null}
@@ -222,7 +226,10 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
         ) : null}
 
         <div className="mt-6">
-          <CoverImage src={study.coverImage} alt={`${study.title} 대표 이미지`} />
+          <CoverImage
+            src={study.coverImage}
+            alt={`${study.title} 대표 이미지`}
+          />
         </div>
 
         <dl className="mt-6 grid grid-cols-1 gap-2 rounded-xl border border-line bg-canvas p-5 sm:grid-cols-2">
@@ -230,6 +237,7 @@ export function CaseStudyCard({ study }: { study: CaseStudy }) {
           <MetaRow label="Period" value={study.period} />
           <MetaRow label="Role" value={study.role} />
           {study.team ? <MetaRow label="Team" value={study.team} /> : null}
+          {study.award ? <MetaRow label="수상" value={study.award} /> : null}
           {study.affiliation ? (
             <MetaRow label="소속" value={study.affiliation} />
           ) : null}
