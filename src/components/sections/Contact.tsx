@@ -21,15 +21,12 @@ export function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="border-t border-line bg-surface px-6 py-24 sm:px-8"
-    >
-      <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div className="max-w-md">
+    <section id="contact" className="section-padding border-t border-line bg-surface">
+      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="max-w-lg">
           <SectionTitle
             eyebrow="CONTACT"
-            title="편하게 연락 주세요"
+            title="연락 주세요"
             description="포트폴리오, 이력서, Notion 자료는 아래 버튼으로 확인할 수 있습니다. 프로젝트 제안, 협업이나 채용 관련 문의는 이메일로 연락 주세요."
           />
         </div>
