@@ -291,7 +291,7 @@ export const caseStudies: CaseStudy[] = [
     award: "캡스톤 경진대회 인기상 수상",
         externalLinks: [
       {
-        label: "포트폴리오 링크",
+        label: "인게임 영상 링크",
         href: "https://drive.google.com/file/d/1BMzA5EoiiAyoGmNAjLaKKhdl_dih2kQe/view?usp=sharing",
       },
     ],
