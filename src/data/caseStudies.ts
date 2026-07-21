@@ -29,6 +29,7 @@ export type CaseStudy = {
   affiliation?: string;
   motif?: string;
   role: string;
+  award?: string;
   externalLinks?: ExternalLink[];
   summary: string;
   skills: string[];
@@ -106,7 +107,7 @@ export const caseStudies: CaseStudy[] = [
       {
         label: "포트폴리오 링크",
         href: "https://drive.google.com/file/d/1cRgJlZfMrQ5_leAeA-uhjja-dWjmw-3i/view?usp=drive_link",
-      },
+      }, 
       {
         label: "인게임 영상",
         href: "https://drive.google.com/file/d/1e3k6z0PDHU-MrapLwAjq59ROqGVP2BP1/view?usp=drive_link",
