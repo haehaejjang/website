@@ -19,6 +19,12 @@ export const projects: Project[] = [
     role: "팀장 · 기획 · 아트",
     experience: "전투 루프와 몬스터 패턴 설계",
     image: "/images/memory-loss.png",
+    externalLinks: [
+      {
+        label: "인게임 영상",
+        href: "https://drive.google.com/file/d/1MtTo_5T5Y6shE1-qxPpZbBG3ON7NP3ld/view?usp=sharing",
+      },
+    ],
   },
   {
     title: "그대는 나의 천사",
