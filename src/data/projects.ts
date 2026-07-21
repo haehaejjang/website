@@ -21,8 +21,16 @@ export const projects: Project[] = [
     image: "/images/memory-loss.png",
     externalLinks: [
       {
+        label: "스킬 기획 포트폴리오",
+        href: "https://drive.google.com/file/d/1giBujYp3ppBDl-RDmAGAj63b3cA26Mct/view?usp=sharing",
+      },
+      {
         label: "인게임 영상",
-        href: "https://drive.google.com/file/d/1MtTo_5T5Y6shE1-qxPpZbBG3ON7NP3ld/view?usp=sharing",
+        href: "https://drive.google.com/file/d/1jhI5iN4U3TLtFYSihA2n_8pAs96auA1n/view?usp=sharing",
+      },
+      {
+        label: "전체 작업물",
+        href: "https://drive.google.com/file/d/1av-UDbF65Da2dbVCoRzdouWe3cIDRuNo/view?usp=sharing",
       },
     ],
   },
