@@ -289,6 +289,12 @@ export const caseStudies: CaseStudy[] = [
     motif: "동화 ‘빨간 모자’",
     role: "기획 · 시나리오 · 아트",
     award: "캡스톤 경진대회 인기상 수상",
+        externalLinks: [
+      {
+        label: "포트폴리오 링크",
+        href: "https://drive.google.com/file/d/1BMzA5EoiiAyoGmNAjLaKKhdl_dih2kQe/view?usp=sharing",
+      },
+    ],
     coverImage: "/images/forest-cover.png",
     summary:
       "익숙한 동화 소재를 단순 재현하지 않고, 플레이어가 공간을 탐색하며 이야기를 해석하는 어드벤처 구조로 재구성했습니다.",
