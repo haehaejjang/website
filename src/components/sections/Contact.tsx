@@ -21,7 +21,10 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="section-padding border-t border-line bg-surface">
+      <section
+        id="contact"
+        className="border-t border-line bg-surface px-6 py-32 sm:px-8 sm:py-36 lg:py-40"
+      >
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="max-w-lg">
           <SectionTitle
