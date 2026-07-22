@@ -49,7 +49,7 @@ export const projects: Project[] = [
     image: "/images/lucid-dream.png",
   },
   {
-    title: "BEAT2:)S",
+    title: "BEAT:)S",
     genre: "리듬 게임",
     role: "기획 · 프로그래밍",
     experience: "가벼운 분위기의 리듬 게임 구성 및 유니티 프로그래밍 경험",
