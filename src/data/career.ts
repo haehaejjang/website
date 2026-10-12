@@ -82,7 +82,7 @@ export const career: CareerItem[] = [
     title: "Unity C# 스터디",
   },
   {
-    period: "2025.02 – 2025.05",
+    period: "2026.02 – 2026.05",
     category: "프로젝트",
     title: "그대는 나의 천사",
     description: "서브컬처 비주얼노벨 · 전체 기획 · 시나리오",
