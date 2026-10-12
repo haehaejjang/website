@@ -81,7 +81,7 @@ export const caseStudies: CaseStudy[] = [
     genre: "AI 기반 3D 심리 공포 퍼즐 / 1인칭",
     period: "2026.05 – 2026.06",
     affiliation: "미래내일 일경험 NCAI 1기 인턴",
-    team: "5인 / Unity",
+    team: "4인 / Unity",
     role: "기획 · 클라이언트 · UI",
     coverImage: "/images/unhinged-cover.png",
     summary:
