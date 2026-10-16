@@ -20,8 +20,8 @@ export const profile = {
   email: "judys_bb@naver.com",
   phone: "010-5919-9613",
 
-  portfolioPdf: "/pdf/Mainportfolio.pdf",
-  portfolioUrl: "/pdf/Mainportfolio.pdf",
+  portfolioPdf: "https://drive.google.com/file/d/1vxgH2ynUVlzhW1bFUklqicMXeUMxsW1E/view?usp=drive_link",
+  portfolioUrl: "https://drive.google.com/file/d/1vxgH2ynUVlzhW1bFUklqicMXeUMxsW1E/view?usp=drive_link",
   resumeUrl: "/pdf/MainResume.pdf",
 
   emailSubject: "게임 기획자 포트폴리오 문의드립니다",
