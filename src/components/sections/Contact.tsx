@@ -86,7 +86,7 @@ export function Contact() {
                   <Button
                     href={profile.portfolioPdf}
                     variant="secondary"
-                    download
+                    external
                     icon={<Download size={16} />}
                     className="w-full"
                   >
@@ -95,6 +95,7 @@ export function Contact() {
                   <Button
                     href={profile.resumeUrl}
                     variant="ghost"
+                    external
                     icon={<FileText size={16} />}
                     className="w-full"
                   >

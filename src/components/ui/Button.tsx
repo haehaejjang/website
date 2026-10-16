@@ -27,12 +27,18 @@ export function Button({
   external,
   className,
 }: ButtonProps) {
+  // 절대 URL(http/https)은 기본적으로 새 탭에서 연다. external을 명시하면 그 값이 우선.
+  const isAbsolute = /^https?:\/\//i.test(href);
+  const openInNewTab = external ?? isAbsolute;
+  // download 속성은 동일 출처에서만 동작한다. 외부 URL에서는 브라우저가 무시하므로 붙이지 않는다.
+  const canDownload = download && !isAbsolute;
+
   return (
     <a
       href={href}
-      download={download}
-      target={external ? "_blank" : undefined}
-      rel={external ? "noopener noreferrer" : undefined}
+      download={canDownload || undefined}
+      target={openInNewTab ? "_blank" : undefined}
+      rel={openInNewTab ? "noopener noreferrer" : undefined}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-tight transition duration-200",
         variants[variant],

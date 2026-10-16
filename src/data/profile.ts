@@ -22,7 +22,7 @@ export const profile = {
 
   portfolioPdf: "https://drive.google.com/file/d/1vxgH2ynUVlzhW1bFUklqicMXeUMxsW1E/view?usp=drive_link",
   portfolioUrl: "https://drive.google.com/file/d/1vxgH2ynUVlzhW1bFUklqicMXeUMxsW1E/view?usp=drive_link",
-  resumeUrl: "/pdf/MainResume.pdf",
+  resumeUrl: "https://drive.google.com/file/d/1vxgH2ynUVlzhW1bFUklqicMXeUMxsW1E/view?usp=drive_link",
 
   emailSubject: "게임 기획자 포트폴리오 문의드립니다",
   emailBody:
