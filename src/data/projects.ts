@@ -10,6 +10,7 @@ export type Project = {
   experience: string;
   image?: string;
   externalLinks?: ProjectLink[];
+  link?: string;
 };
 
 export const projects: Project[] = [
