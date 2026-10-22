@@ -99,10 +99,10 @@ export const caseStudies: CaseStudy[] = [
     title: "UNHINGED",
     genre: "AI 기반 3D 심리 공포 퍼즐 / 1인칭",
     period: "2026.05 – 2026.06",
-    affiliation: "미래내일 일경험 NCAI 1기 인턴",
-    team: "5인 / Unity",
+    affiliation: "2026 미래내일 일경험(프로젝트형) · ㈜엔씨에이아이",
+    team: "2인 (초기 4인) / Unity",
     role: "기획 · 클라이언트 · UI",
-    award: "우수상 수상",
+    award: "2026 미래내일 일경험사업(프로젝트형) 우수상",
     externalLinks: [
       {
         label: "포트폴리오 링크",
@@ -133,7 +133,7 @@ export const caseStudies: CaseStudy[] = [
         "VARCO 3D 에셋과 사운드를 제작 및 이식했습니다.",
         "충돌·스케일·재질 문제를 디버깅했습니다.",
       ],
-      result: ["NCAI 관계자 투표 우수팀 선정.", "우수상 수상."],
+      result: ["NCAI 관계자 투표 우수팀 선정.", "2026 미래내일 일경험사업(프로젝트형) 우수상 수상."],
     },
     placeholders: [
       { label: "LEVEL DESIGN", image: "/images/unhinged-leveldesign.png" },
@@ -166,7 +166,7 @@ export const caseStudies: CaseStudy[] = [
     skills: ["System Design", "Documentation"],
     detail: {
       problem:
-        "로스트아크의 일일 반복 콘텐츠는 성장에 필요한 보상을 제공하지만, 장기 플레이어에게는 ‘숙제’로 인식되기 쉽습니다. 일일 숙제 보상을 놓치면 손해라는 압박과 캐릭터 수가 늘수록 증가하는 반복 부담에 있다고 판단했습니다.",
+        "로스트아크의 일일 반복 콘텐츠는 성장에 필요한 보상을 제공하지만, 장기 플레이어에게는 ‘숙제’로 인식되기 쉽습니다. 피로의 핵심 원인은 일일 숙제 보상을 놓치면 손해라는 압박과, 캐릭터 수가 늘수록 커지는 반복 부담이라고 판단했습니다.",
       designIntent:
         "접속 동기는 유지하되, 매일 플레이해야 한다는 압박은 줄이는 구조를 목표로 했습니다.",
       solution: [
@@ -288,7 +288,7 @@ export const caseStudies: CaseStudy[] = [
     period: "2023.03 – 2023.12",
     motif: "동화 ‘빨간 모자’",
     role: "기획 · 시나리오 · 아트",
-    award: "캡스톤 경진대회 인기상 수상",
+    award: "2023 한국게임학회 추계학술발표대회 인기상 수상",
         externalLinks: [
       {
         label: "인게임 영상 링크",
@@ -297,7 +297,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     coverImage: "/images/forest-cover.png",
     summary:
-      "익숙한 동화 소재를 단순 재현하지 않고, 플레이어가 공간을 탐색하며 이야기를 해석하는 어드벤처 구조로 재구성했습니다.",
+      "익숙한 동화 소재를, 플레이어가 공간을 탐색하며 이야기를 해석하는 어드벤처 구조로 재구성했습니다.",
     skills: ["Scenario Design", "Content Design", "Art"],
     detail: {
       problem:

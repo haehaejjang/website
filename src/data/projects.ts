@@ -39,7 +39,7 @@ export const projects: Project[] = [
     image: "/images/angel.png",
   },
   {
-    title: "LUCID DREAM",
+    title: "ARPA (구 LUCID DREAM)",
     genre: "로그라이트",
     role: "기획 · 서브 컨셉 아트",
     experience: "반복 전투 구조와 콘셉트 보조",
