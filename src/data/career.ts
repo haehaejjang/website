@@ -66,12 +66,6 @@ export const career: CareerItem[] = [
     title: "Unity C# 스터디",
   },
   {
-    period: "2025.02 – 2025.05",
-    category: "프로젝트",
-    title: "그대는 나의 천사",
-    description: "서브컬처 비주얼노벨 · 전체 기획 · 시나리오",
-  },
-  {
     period: "2025.07 – 2025.08",
     category: "프로젝트",
     title: "Memory Loss",
@@ -99,6 +93,12 @@ export const career: CareerItem[] = [
     category: "활동",
     title: "게임 분석 스터디",
     description: "라이브 서비스 게임 시스템 분석 및 역기획 문서 작성",
+  },
+  {
+    period: "2026.02 – 2026.05",
+    category: "프로젝트",
+    title: "그대는 나의 천사",
+    description: "서브컬처 비주얼노벨 · 전체 기획 · 시나리오",
   },
   {
     period: "2026.03 – 2026.05",
