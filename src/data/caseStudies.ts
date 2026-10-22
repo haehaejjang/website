@@ -80,8 +80,8 @@ export const caseStudies: CaseStudy[] = [
     title: "UNHINGED",
     genre: "AI 기반 3D 심리 공포 퍼즐 / 1인칭",
     period: "2026.05 – 2026.06",
-    affiliation: "미래내일 일경험 NCAI 1기 인턴",
-    team: "4인 / Unity",
+    affiliation: "2026 미래내일 일경험(프로젝트형) · ㈜엔씨에이아이",
+    team: "2인 (초기 4인) / Unity",
     role: "기획 · 클라이언트 · UI",
     coverImage: "/images/unhinged-cover.png",
     summary:
@@ -103,7 +103,7 @@ export const caseStudies: CaseStudy[] = [
         "VARCO 3D 에셋과 사운드를 제작 및 이식했습니다.",
         "충돌·스케일·재질 문제를 디버깅했습니다.",
       ],
-      result: ["팀 투표 우수팀 선정.", "우수상 수상."],
+      result: ["팀 투표 우수팀 선정.", "2026 미래내일 일경험사업(프로젝트형) 우수상 수상."],
     },
     placeholders: [
       { label: "LEVEL DESIGN", image: "/images/unhinged-leveldesign.png" },

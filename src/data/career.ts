@@ -35,7 +35,7 @@ export const career: CareerItem[] = [
   {
     period: "2023.07",
     category: "활동",
-    title: "아스트로 VR 게임 기획 공모전 출품",
+    title: "아스트로 모바일 AR 게임 기획 공모전 출품",
   },
   {
     period: "2023.07",
@@ -67,7 +67,7 @@ export const career: CareerItem[] = [
   {
     period: "2024.03 – 2024.07",
     category: "프로젝트",
-    title: "LUCID DREAM",
+    title: "ARPA (구 LUCID DREAM)",
     description: "로그라이트 · 게임 기획 · 서브 컨셉 아트",
   },
   {
@@ -94,7 +94,7 @@ export const career: CareerItem[] = [
     description: "턴제 로그라이트 · 팀장 · 전체 기획 · 아트",
   },
   {
-    period: "2025.08 – 2025.11",
+    period: "2025.07 – 2025.12",
     category: "경력",
     title: "중앙대학교 게임 인문학 교양 조교",
   },
@@ -126,7 +126,13 @@ export const career: CareerItem[] = [
     period: "2026.05 – 2026.06",
     category: "프로젝트",
     title: "UNHINGED",
-    description: "3D 심리 공포 퍼즐 · 기획 · 클라이언트 · UI",
+    description: "3D 심리 공포 퍼즐 · 기획 · 클라이언트 · UI · 미래내일 일경험(프로젝트형)",
+  },
+  {
+    period: "2026.06",
+    category: "수상",
+    title: "2026 미래내일 일경험사업(프로젝트형) 우수상",
+    description: "수상작: UNHINGED · 참여기업 ㈜엔씨에이아이",
   },
 ];
 
