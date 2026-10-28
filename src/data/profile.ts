@@ -20,12 +20,9 @@ export const profile = {
   email: "judys_bb@naver.com",
   phone: "010-5919-9613",
 
-  portfolioPdf:
-    "https://drive.google.com/file/d/1vxgH2ynUVlzhW1bFUklqicMXeUMxsW1E/view?usp=drive_link",
-  portfolioUrl:
-    "https://drive.google.com/file/d/1vxgH2ynUVlzhW1bFUklqicMXeUMxsW1E/view?usp=drive_link",
-  resumeUrl:
-    "https://drive.google.com/file/d/1vxgH2ynUVlzhW1bFUklqicMXeUMxsW1E/view?usp=drive_link",
+  portfolioPdf: "https://drive.google.com/file/d/13RgB0GkHbL7MuJe0-QZfFV3AQjsQe2ym/view?usp=sharing",
+  portfolioUrl: "https://drive.google.com/file/d/13RgB0GkHbL7MuJe0-QZfFV3AQjsQe2ym/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/13RgB0GkHbL7MuJe0-QZfFV3AQjsQe2ym/view?usp=sharing",
 
   emailSubject: "게임 기획자 포트폴리오 문의드립니다",
   emailBody:
@@ -48,6 +45,7 @@ export const profile = {
 
   stats: [
     { value: "10개 이상", label: "프로젝트" },
+    { value: "4,400H+", label: "테일즈런너 플레이 시간" },
     { value: "3년 이상", label: "게임 제작" },
     { value: "2개 이상", label: "수상 경력" },
     { value: "60개 이상", label: "게임 플레이 경험" },
